@@ -9,8 +9,7 @@ router.get('/task/:id', authentication, getTask);
 router.get('/tasks', authentication, getAllTask);
 router.put('/task/:id', authentication, authorization, updateTask);
 router.delete('/task/:id', authentication, authorization, deleteTask);
-// router.post('/group/:userId', authentication, getTasksGroupedByOrganization);
-router.post('/group/:userId', getTasksGroupedByOrganization);
+router.post('/group/:userId', authentication, getTasksGroupedByOrganization);
 
 
 module.exports = router;
